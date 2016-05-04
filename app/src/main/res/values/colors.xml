@@ -10,4 +10,5 @@
     <color name="backgroundgrey">#B4B4B4</color>
     <color name="buttonorange">#D07C42</color>
     <color name="border">#CDCDCD</color>
+    <color name="addImageColor">#E2E2E2</color>
 </resources>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">The Force</string>
+    <string name="invite_more_collaborators">Invite more collaborators</string>
+    <string name="username">Username</string>
 </resources>

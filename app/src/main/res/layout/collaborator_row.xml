@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/userimage"
+        android:src="@drawable/invite_icon_contacts"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+
+    <TextView
+        android:id="@+id/username"
+        android:text="@string/username"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/userimage"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/timeicon"
+        android:src="@drawable/ic_access_time_black_18dp"
+        android:layout_toRightOf="@+id/userimage"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/username"
+        android:layout_width="18dp"
+        android:layout_height="18dp" />
+    <TextView
+        android:id="@+id/timeadded"
+        android:text="5 minutes ago"
+        android:textColor="@color/textgrey"
+        android:layout_toRightOf="@+id/timeicon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/minimize"
+        android:text="-"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_minimize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

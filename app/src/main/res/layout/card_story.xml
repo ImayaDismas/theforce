@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<it.gmariotti.cardslib.library.view.CardViewNative xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/story_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card:card_layout_resourceID="@layout/native_material_largeimage_card"
+    style="@style/card_external"
+    >
+    <RelativeLayout
+        android:id="@+id/card_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/card_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <ImageView
+                android:id="@+id/bcgimage"
+                android:src="@drawable/splash_bg"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/editbutton"
+                android:background="@drawable/icon_edit_story"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/story_title"
+                android:text="Stuff"
+                android:textSize="36sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/timedate"
+                android:textColor="#FAFAFA"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:text="May 31, 2015 / 4:04PM"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Los Angeles"
+                android:textColor="#FAFAFA"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/collaborators"
+            android:layout_below="@id/card_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/bitsbutton"
+                android:text="28 bits"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_transparent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    </it.gmariotti.cardslib.library.view.CardViewNative>

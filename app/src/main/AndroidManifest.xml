@@ -10,12 +10,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".CreateProfile"
-            android:label="Create Profile">
+            android:label="Create Profile"></activity>
+        <activity
+            android:name=".StoryCollaborators"
+            android:label="Story Collaborators">
 
         </activity>
-        <activity android:name=".StoryCollaborators"
-            android:label="Story Collaborators"
-            >
+        <activity android:name=".MyStories">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

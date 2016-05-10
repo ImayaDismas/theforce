@@ -40,5 +40,8 @@ public class StoryCollaborators extends AppCompatActivity {
 
         collaborator = new Collaborator("Imaya Dismas","15 minutes ago");
         collaboratorList.add(collaborator);
+
+        collaborator = new Collaborator("Philip Mue", "30 minutes ago");
+        collaboratorList.add(collaborator);
     }
 }

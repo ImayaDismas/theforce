@@ -85,7 +85,6 @@
                 android:id="@+id/textView3"
                 android:textColor="#ffffff"
                 android:textSize="40px"
-                android:textStyle="bold"
                 android:layout_marginTop="30dp"
                 android:layout_below="@+id/editText3"
                 android:layout_centerHorizontal="true" />

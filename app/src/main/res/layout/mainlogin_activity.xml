@@ -96,7 +96,6 @@
                 android:text="@string/forgot_password"
                 android:id="@+id/textView4"
                 android:textColor="#ffffff"
-                android:textStyle="bold"
                 android:textSize="48px"
                 android:layout_below="@id/button"
                 android:layout_centerHorizontal="true"

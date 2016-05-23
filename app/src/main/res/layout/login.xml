@@ -20,45 +20,47 @@
                 android:src="@drawable/splash_logo"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="49dp" />
+                android:layout_marginTop="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Get every bit of a story"
+                android:text="Get every bit of a story."
                 android:id="@+id/textView2"
                 android:textColor="#ffffff"
+                android:textSize="25sp"
                 android:layout_below="@+id/imageView3"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView2"
-                android:text="Sign Up"
+                android:hint="Sign Up"
                 android:id="@+id/button"
                 android:layout_marginTop="145dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/roundshapebtn"
                 android:focusableInTouchMode="false"
                 android:textSize="48px"
-                android:width="320px"
-                android:textColor="#ffffff"
+                android:width="420px"
+                android:textColorHint="#ffffff"
                 android:height="88px" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="log in"
+                android:hint="Log In"
                 android:id="@+id/button2"
                 android:layout_alignTop="@+id/button"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="87dp"
                 android:background="@drawable/roundshapebtn1"
                 android:textSize="48px"
-                android:width="320px"
-                android:textColor="#ffffff"
+                android:width="420px"
+                android:textColorHint="#ffffff"
                 android:height="88px" />
 
         </RelativeLayout>

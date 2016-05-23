@@ -3,4 +3,6 @@
     <string name="invite_more_collaborators">Invite more collaborators</string>
     <string name="username">Username</string>
     <string name="remove_button">remove button</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="i_accept_evrybit_terms_and_conditions">I accept <u>Evrybit Terms and Conditions</u></string>
 </resources>

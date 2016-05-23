@@ -29,7 +29,7 @@
                 android:src="@drawable/splash_logo"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="10dp" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                 android:inputType="textEmailAddress"
                 android:id="@+id/editText"
                 android:layout_below="@+id/imageView3"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="30dp"
                 android:text="Email Address"
                 android:textColor="#ffffff"
                 android:paddingLeft="20dp"
@@ -81,9 +81,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="I accept Evrybit Terms and Conditions"
+                android:text="@string/i_accept_evrybit_terms_and_conditions"
                 android:id="@+id/textView3"
                 android:textColor="#ffffff"
+                android:textSize="40px"
+                android:textStyle="bold"
                 android:layout_marginTop="30dp"
                 android:layout_below="@+id/editText3"
                 android:layout_centerHorizontal="true" />
@@ -99,7 +101,7 @@
                 android:background="@drawable/roundshapebtn"
                 android:focusableInTouchMode="false"
                 android:textSize="48px"
-                android:width="320px"
+                android:width="420px"
                 android:textColor="#ffffff"
                 android:height="88px" />
 

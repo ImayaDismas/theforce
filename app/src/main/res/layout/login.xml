@@ -43,7 +43,7 @@
                 android:background="@drawable/roundshapebtn"
                 android:focusableInTouchMode="false"
                 android:textSize="48px"
-                android:width="320px"
+                android:width="420px"
                 android:textColor="#ffffff"
                 android:height="88px" />
 
@@ -57,7 +57,7 @@
                 android:layout_marginTop="87dp"
                 android:background="@drawable/roundshapebtn1"
                 android:textSize="48px"
-                android:width="320px"
+                android:width="420px"
                 android:textColor="#ffffff"
                 android:height="88px" />
 

@@ -22,20 +22,11 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="49dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Get every bit of a story"
-                android:id="@+id/textView2"
-                android:textColor="#ffffff"
-                android:layout_below="@+id/imageView3"
-                android:layout_centerHorizontal="true" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView2"
+                android:layout_below="@id/imageView3"
                 android:text="Sign Up"
                 android:id="@+id/button"
                 android:layout_marginTop="145dp"
@@ -47,19 +38,7 @@
                 android:textColor="#ffffff"
                 android:height="88px" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="log in"
-                android:id="@+id/button2"
-                android:layout_alignTop="@+id/button"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="87dp"
-                android:background="@drawable/roundshapebtn1"
-                android:textSize="48px"
-                android:width="320px"
-                android:textColor="#ffffff"
-                android:height="88px" />
+
 
         </RelativeLayout>
     </ScrollView>

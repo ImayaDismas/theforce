@@ -30,7 +30,6 @@ public class StoryCardAdapter extends CardArrayRecyclerViewAdapter {
 
         public ViewHolder(View view) {
             super(view);
-            title
         }
     }
 

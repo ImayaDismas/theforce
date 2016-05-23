@@ -38,8 +38,9 @@
                 android:id="@+id/editText"
                 android:layout_below="@+id/imageView3"
                 android:layout_marginTop="30dp"
-                android:text="Email Address"
+                android:hint="Email Address"
                 android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
                 android:paddingLeft="20dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/edit_fields_shape"
@@ -53,8 +54,9 @@
                 android:id="@+id/editText2"
                 android:layout_below="@+id/editText"
                 android:layout_centerHorizontal="true"
-                android:text="Password (at least 6 characters)"
+                android:hint="Password (at least 6 characters)"
                 android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
                 android:paddingLeft="20dp"
                 android:background="@drawable/edit_fields_shape"
                 android:height="88px"
@@ -67,8 +69,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editText3"
                 android:layout_below="@+id/editText2"
-                android:text="Age (for verification)"
+                android:hint="Age (for verification)"
                 android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
                 android:paddingLeft="20dp"
                 android:background="@drawable/edit_fields_shape"
                 android:height="88px"
@@ -104,9 +107,6 @@
                 android:width="420px"
                 android:textColor="#ffffff"
                 android:height="88px" />
-
-
-
 
         </RelativeLayout>
     </ScrollView>

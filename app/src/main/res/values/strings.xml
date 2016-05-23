@@ -5,4 +5,5 @@
     <string name="remove_button">remove button</string>
     <string name="forgot_password"><u>Forgot Password?</u></string>
     <string name="i_accept_evrybit_terms_and_conditions">I accept <u>Evrybit Terms and Conditions</u></string>
+    <string name="logo_desc">Back Button</string>
 </resources>

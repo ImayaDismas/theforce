@@ -13,23 +13,88 @@
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:layout_alignParentTop="true"
+                android:background="transparent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/btn_navbar_back2x" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
                 android:id="@+id/imageView3"
                 android:src="@drawable/splash_logo"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="49dp" />
+                android:layout_marginTop="30dp" />
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:id="@+id/editText"
+                android:layout_below="@+id/imageView3"
+                android:layout_marginTop="38dp"
+                android:text="Email Address"
+                android:textColor="#ffffff"
+                android:paddingLeft="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edit_fields_shape"
+                android:height="88px"
+                android:textSize="48px"
+                android:width="720px"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:layout_below="@+id/editText"
+                android:layout_centerHorizontal="true"
+                android:text="Password (at least 6 characters)"
+                android:textColor="#ffffff"
+                android:paddingLeft="20dp"
+                android:background="@drawable/edit_fields_shape"
+                android:height="88px"
+                android:textSize="46px"
+                android:width="720px"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText3"
+                android:layout_below="@+id/editText2"
+                android:text="Age (for verification)"
+                android:textColor="#ffffff"
+                android:paddingLeft="20dp"
+                android:background="@drawable/edit_fields_shape"
+                android:height="88px"
+                android:textSize="48px"
+                android:width="720px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="I accept Evrybit Terms and Conditions"
+                android:id="@+id/textView3"
+                android:textColor="#ffffff"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/editText3"
+                android:layout_centerHorizontal="true" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageView3"
+                android:layout_below="@id/editText3"
                 android:text="Sign Up"
                 android:id="@+id/button"
-                android:layout_marginTop="145dp"
+                android:layout_marginTop="55dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/roundshapebtn"
                 android:focusableInTouchMode="false"
@@ -37,6 +102,7 @@
                 android:width="320px"
                 android:textColor="#ffffff"
                 android:height="88px" />
+
 
 
 

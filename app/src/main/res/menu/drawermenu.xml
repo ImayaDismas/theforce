@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:title="Name of User"
-        android:id="@+id/nav_item_pic"
-        android:icon="@drawable/tab_icon_profile_active3x"/>
+    <item android:title="">
+        <menu>
+        <item android:title="Name of User"
+            android:id="@+id/nav_item_pic"
+            android:icon="@drawable/tab_icon_profile_active3x"/>
+        </menu>
+    </item>
 
     <item android:title="Main Menu">
         <menu>
@@ -37,18 +40,6 @@
                 android:title="About"
                 android:id="@+id/nav_item_about"
                 android:icon="@drawable/icon_about2x"/>
-
-            <item android:title="Settings"
-                android:id="@+id/nav_item_settings"
-                android:icon="@drawable/tab_icon_more_idle2x"/>
-
-            <item android:title="Help"
-                android:id="@+id/nav_item_help"
-                android:icon="@drawable/tab_icon_notifications_active2x"/>
-            <item
-                android:title="Log Out"
-                android:id="@+id/nav_item_logout"
-                android:icon="@drawable/icon_remove_collaborator2x"/>
         </menu>
     </item>
 

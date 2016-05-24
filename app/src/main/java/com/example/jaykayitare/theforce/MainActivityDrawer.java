@@ -80,18 +80,7 @@ public class MainActivityDrawer extends AppCompatActivity{
                     FragmentTransaction ffragmentTransaction = mFragmentManager.beginTransaction();
                     ffragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
                 }
-                if (menuItem.getItemId() == R.id.nav_item_settings) {
-                    FragmentTransaction gfragmentTransaction = mFragmentManager.beginTransaction();
-                    gfragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
-                }
-                if (menuItem.getItemId() == R.id.nav_item_help) {
-                    FragmentTransaction hfragmentTransaction = mFragmentManager.beginTransaction();
-                    hfragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
-                }
-                if (menuItem.getItemId() == R.id.nav_item_logout) {
-                    FragmentTransaction ifragmentTransaction = mFragmentManager.beginTransaction();
-                    ifragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
-                }
+                
 
                 return false;
             }

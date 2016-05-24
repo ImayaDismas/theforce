@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="">
+        <menu>
+        <item android:title="Name of User"
+            android:id="@+id/nav_item_pic"
+            android:icon="@drawable/tab_icon_profile_active3x"/>
+        </menu>
+    </item>
+
+    <item android:title="Main Menu">
+        <menu>
+
+        <item android:title="Discover"
+            android:id="@+id/nav_item_discover"
+            android:icon="@drawable/tab_icon_discover_idle2x"/>
+
+        <item android:title="Profile"
+            android:id="@+id/nav_item_profile"
+            android:icon="@drawable/tab_icon_profile_idle2x"/>
+
+        <item android:title="My Stories"
+            android:id="@+id/nav_item_mystories"
+            android:icon="@drawable/tab_icon_stories_idle2x"/>
+
+        <item android:title="Notifications"
+            android:id="@+id/nav_item_notifications"
+            android:icon="@drawable/tab_icon_notifications_idle2x"/>
+        </menu>
+    </item>
+
+
+    <item android:title="More">
+        <menu>
+            <item
+                android:title="Account"
+                android:id="@+id/nav_item_account"
+                android:icon="@drawable/icon_account2x"/>
+            <item
+                android:title="About"
+                android:id="@+id/nav_item_about"
+                android:icon="@drawable/icon_about2x"/>
+        </menu>
+    </item>
+
+</menu>

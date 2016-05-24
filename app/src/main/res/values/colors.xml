@@ -11,4 +11,5 @@
     <color name="buttonorange">#D07C42</color>
     <color name="border">#CDCDCD</color>
     <color name="addImageColor">#E2E2E2</color>
+    <color name="black">#000000</color>
 </resources>

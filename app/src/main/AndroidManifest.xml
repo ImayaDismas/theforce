@@ -36,12 +36,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CreateProfile"
-            android:label="Create Profile"
-            android:theme="@style/AppTheme">
+        <activity android:name=".CreateProfile">
             <intent-filter>
                 <action android:name="android.intent.action.CreateProfile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CreateStory">
+            <intent-filter>
+                <action android:name="android.intent.action.CreateStory" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

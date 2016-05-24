@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".CreateProfile">
+    tools:context=".CreateStory">
 
-    <item android:id="@+id/create_profile"
-        android:title="@string/create_profile"
-        android:orderInCategory="500"
+    <item android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/navbar_icon_search2x"
+        android:orderInCategory="100"
         app:showAsAction="ifRoom" />
-
 </menu>

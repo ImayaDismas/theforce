@@ -1,13 +1,18 @@
 package com.example.jaykayitare.theforce;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class CreateProfile extends AppCompatActivity {
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,26 +24,25 @@ public class CreateProfile extends AppCompatActivity {
         setSupportActionBar(topToolBar);
         topToolBar.setLogo(R.drawable.btn_navbar_back2x);
         topToolBar.setLogoDescription(getResources().getString(R.string.logo_desc));
+        addListenerOnButton();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.profile_toolbar, menu);
-        return true;
-    }
+    public void addListenerOnButton() {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        final Context context = this;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.create_profile) {
-            Toast.makeText(CreateProfile.this, "Create Profile", Toast.LENGTH_LONG).show();
-        }
+        button = (Button) findViewById(R.id.create_profile);
 
-        return super.onOptionsItemSelected(item);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, CreateStory.class);
+                startActivity(intent);
+
+            }
+
+        });
+
     }
 }

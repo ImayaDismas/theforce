@@ -7,4 +7,5 @@
     <string name="i_accept_evrybit_terms_and_conditions">I accept <u>Evrybit Terms and Conditions</u></string>
     <string name="logo_desc">Back Button</string>
     <string name="create_profile">Create Profile</string>
+    <string name="action_search">Search</string>
 </resources>

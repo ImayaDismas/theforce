@@ -44,7 +44,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/roundshapebtn"
                 android:focusableInTouchMode="false"
-                android:textSize="48px"
+                android:textSize="35px"
                 android:width="420px"
                 android:textColorHint="#ffffff"
                 android:height="88px" />
@@ -58,7 +58,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="87dp"
                 android:background="@drawable/roundshapebtn1"
-                android:textSize="48px"
+                android:textSize="35px"
                 android:width="420px"
                 android:textColorHint="#ffffff"
                 android:height="88px" />

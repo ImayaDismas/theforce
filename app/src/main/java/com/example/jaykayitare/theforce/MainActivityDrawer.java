@@ -7,7 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 /**
  * Created by imaya on 5/24/16.
@@ -22,6 +25,11 @@ public class MainActivityDrawer extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maindrawer);
+
+        setTitle(null);
+
+        Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(topToolBar);
 
         /**
          *Setup the DrawerLayout and NavigationView
@@ -66,7 +74,7 @@ public class MainActivityDrawer extends AppCompatActivity{
                 }
                 if (menuItem.getItemId() == R.id.nav_item_mystories) {
                     FragmentTransaction cfragmentTransaction = mFragmentManager.beginTransaction();
-                    cfragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
+                    cfragmentTransaction.replace(R.id.containerView,new TabFragment()).commit();
                 }
                 if (menuItem.getItemId() == R.id.nav_item_notifications) {
                     FragmentTransaction dfragmentTransaction = mFragmentManager.beginTransaction();
@@ -80,7 +88,7 @@ public class MainActivityDrawer extends AppCompatActivity{
                     FragmentTransaction ffragmentTransaction = mFragmentManager.beginTransaction();
                     ffragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
                 }
-                
+
 
                 return false;
             }
@@ -99,5 +107,25 @@ public class MainActivityDrawer extends AppCompatActivity{
 
         mDrawerToggle.syncState();
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.create_story, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_search) {
+            Toast.makeText(MainActivityDrawer.this, "Search", Toast.LENGTH_LONG).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

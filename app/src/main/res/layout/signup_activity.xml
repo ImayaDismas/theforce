@@ -87,7 +87,7 @@
                 android:text="@string/i_accept_evrybit_terms_and_conditions"
                 android:id="@+id/textView3"
                 android:textColor="#ffffff"
-                android:textSize="40px"
+                android:textSize="35px"
                 android:layout_marginTop="30dp"
                 android:layout_below="@+id/editText3"
                 android:layout_centerHorizontal="true" />
@@ -102,7 +102,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/roundshapebtn"
                 android:focusableInTouchMode="false"
-                android:textSize="48px"
+                android:textSize="35px"
                 android:textColorHint="#FFFFFF"
                 android:width="420px"
                 android:textColor="#ffffff"

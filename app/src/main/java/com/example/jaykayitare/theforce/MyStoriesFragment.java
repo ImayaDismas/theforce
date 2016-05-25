@@ -83,17 +83,20 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
 
             @Override
             public void success(All all, Response response) {
-//                mSwipeRefreshLayout.setRefreshing(false);
-//                lLayout = new LinearLayoutManager(getActivity());
-//                List<ItemObject> rowListItem = getAllItemList();
-//
-//                RecyclerView rView = (RecyclerView) findViewById(R.id.recycler_view);
-//                rView.setLayoutManager(lLayout);
-//
-//                RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(getActivity(), rowListItem);
-//                rView.setAdapter(rcAdapter);
-                MyStoriesFragment fragment = new MyStoriesFragment();
-                getFragmentManager().beginTransaction().replace(R.id.recycler_view, fragment);
+                LayoutInflater inflater = null;
+                ViewGroup container = null;
+                final View rootView = inflater.inflate(R.layout.my_stories_layout, container, false);
+                mSwipeRefreshLayout.setRefreshing(false);
+                lLayout = new LinearLayoutManager(getActivity());
+                List<ItemObject> rowListItem = getAllItemList();
+
+                RecyclerView rView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
+                rView.setLayoutManager(lLayout);
+
+                RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(getActivity(), rowListItem);
+                rView.setAdapter(rcAdapter);
+//                MyStoriesFragment fragment = new MyStoriesFragment();
+//                getFragmentManager().beginTransaction().replace(R.id.recycler_view, fragment);
 
                 Toast.makeText(getActivity(), "Successful", Toast.LENGTH_SHORT).show();
             }

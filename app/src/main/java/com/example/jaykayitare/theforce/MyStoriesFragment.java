@@ -12,6 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.jaykayitare.theforce.adapter.All;
+import com.example.jaykayitare.theforce.adapter.ItemObject;
+import com.example.jaykayitare.theforce.adapter.RecyclerViewAdapter;
+import com.example.jaykayitare.theforce.adapter.StoryApi;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,27 +47,30 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.my_stories_layout,null);
+        final View rootView = inflater.inflate(R.layout.my_stories_layout, container, false);
+//        return inflater.inflate(R.layout.my_stories_layout,null);
 
-        ButterKnife.bind(this);
+        ButterKnife.bind(getActivity());
 
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
-        lLayout = new LinearLayoutManager(MyStoriesFragment.this);
+        lLayout = new LinearLayoutManager(getActivity());
         List<ItemObject> rowListItem = getAllItemList();
 
-        RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
+        RecyclerView rView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         rView.setLayoutManager(lLayout);
 
-        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(MainActivity.this, rowListItem);
+        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(getActivity(), rowListItem);
         rView.setAdapter(rcAdapter);
 
-        Toast.makeText(getApplicationContext(), "Swipe down to refresh", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Swipe down to refresh", Toast.LENGTH_LONG).show();
 
         mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
+
+        return rootView;
     }
     @Override
     public void onRefresh() {
@@ -71,20 +79,21 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
             @Override
             public void failure(RetrofitError error) {
                 mSwipeRefreshLayout.setRefreshing(false);
-                Toast.makeText(getApplicationContext(), "Failed to load", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Failed to load", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void success(All all, Response response) {
-                mSwipeRefreshLayout.setRefreshing(false);
-                lLayout = new LinearLayoutManager(MainActivity.this);
-                List<ItemObject> rowListItem = getAllItemList();
-
-                RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
-                rView.setLayoutManager(lLayout);
-
-                RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(MainActivity.this, rowListItem);
-                rView.setAdapter(rcAdapter);
+//                mSwipeRefreshLayout.setRefreshing(false);
+//                lLayout = new LinearLayoutManager(getActivity());
+//                List<ItemObject> rowListItem = getAllItemList();
+//
+//                RecyclerView rView = (RecyclerView)rofindViewById(R.id.recycler_view);
+//                rView.setLayoutManager(lLayout);
+//
+//                RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(getActivity(), rowListItem);
+//                rView.setAdapter(rcAdapter);
+                Toast.makeText(getActivity(), "Successful", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -116,7 +125,7 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
             @Override
             public void failure(RetrofitError error) {
                 //story_title.setText(error.getMessage());
-                Toast.makeText(getApplicationContext(), "Failed to load", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Failed to load", Toast.LENGTH_SHORT).show();
             }
         });
 

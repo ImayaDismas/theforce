@@ -30,13 +30,14 @@ import retrofit.client.Response;
 /**
  * Created by imaya on 5/24/16.
  */
-public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
+//public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
+public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
     private LinearLayoutManager lLayout;
     String API = "http://52.37.33.186/";
 
-    @Bind(R.id.swipe_container)
-    SwipeRefreshLayout mSwipeRefreshLayout;
+//    @Bind(R.id.swipe_container)
+      SwipeRefreshLayout mSwipeRefreshLayout;
 
     List<ItemObject> allItems = new ArrayList<ItemObject>(); //holds data read from the api
 
@@ -48,11 +49,6 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.my_stories_layout, container, false);
-//        return inflater.inflate(R.layout.my_stories_layout,null);
-
-        ButterKnife.bind(getActivity());
-
-        mSwipeRefreshLayout.setOnRefreshListener(this);
 
         lLayout = new LinearLayoutManager(getActivity());
         List<ItemObject> rowListItem = getAllItemList();
@@ -64,8 +60,10 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
         rView.setAdapter(rcAdapter);
 
         Toast.makeText(getActivity(), "Swipe down to refresh", Toast.LENGTH_LONG).show();
-
-        mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+        mSwipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_container);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+        mSwipeRefreshLayout.setColorSchemeResources(
+                android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
@@ -74,6 +72,7 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
     }
     @Override
     public void onRefresh() {
+
         StoryApi story = restAdapter.create(StoryApi.class);
         story.getStory(new Callback<All>() {
             @Override
@@ -88,11 +87,14 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
 //                lLayout = new LinearLayoutManager(getActivity());
 //                List<ItemObject> rowListItem = getAllItemList();
 //
-//                RecyclerView rView = (RecyclerView)rofindViewById(R.id.recycler_view);
+//                RecyclerView rView = (RecyclerView) findViewById(R.id.recycler_view);
 //                rView.setLayoutManager(lLayout);
 //
 //                RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(getActivity(), rowListItem);
 //                rView.setAdapter(rcAdapter);
+                MyStoriesFragment fragment = new MyStoriesFragment();
+                getFragmentManager().beginTransaction().replace(R.id.recycler_view, fragment);
+
                 Toast.makeText(getActivity(), "Successful", Toast.LENGTH_SHORT).show();
             }
         });
@@ -105,7 +107,7 @@ public class MyStoriesFragment extends Fragment implements SwipeRefreshLayout.On
             @Override
             public void success(All all, Response response) {
 
-                for (int i = 0; i < all.objects.size(); i++) {
+                for (int i = 0; i < 3; i++) {
 //                    Reads the data into a variable
                     String ti_tle = all.objects.get(i).getTitle();
 //                    String pic = R.drawable.canada;

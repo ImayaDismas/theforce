@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="fill_parent"
-        android:layout_height="64dp"
-        android:background="@color/weirdblue"
-        android:minHeight="?attr/actionBarSize" />
-    <TextView
-        android:layout_width="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="My Stories"
-        android:id="@+id/textView5"
-        android:textColor="#FFFFFF"
-        android:textSize="48px"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true" />
+        android:background="@color/weirdblue"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="My Stories"
+        app:titleMarginStart="60dp"/>
+
     <it.gmariotti.cardslib.library.view.CardViewNative xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card="http://schemas.android.com/apk/res-auto"
         android:id="@+id/story_card"
@@ -61,7 +57,7 @@
                 <TextView
                     android:id="@+id/story_start"
                     android:text="Start your first story by tapping"
-                    android:textSize="22sp"
+                    android:textSize="35px"
                     android:layout_centerHorizontal="true"
                     android:textColor="#FFF"
                     android:layout_below="@id/story_welcome"
@@ -71,7 +67,7 @@
                 <TextView
                     android:id="@+id/story_end"
                     android:text="the (+) icon below"
-                    android:textSize="22sp"
+                    android:textSize="35px"
                     android:layout_centerHorizontal="true"
                     android:textColor="#FFF"
                     android:layout_below="@id/story_start"

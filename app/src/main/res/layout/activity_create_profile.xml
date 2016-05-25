@@ -3,24 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.jaykayitare.theforce.CreateProfile">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@color/weirdblue"
-        android:minHeight="?attr/actionBarSize" />
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/create_profile"
-        android:id="@+id/textView5"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="48px"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true" />
+        android:background="@color/weirdblue"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Create Profile"
+        app:titleMarginStart="100dp"/>
     <ScrollView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -51,7 +44,7 @@
                 <TextView
                     android:id="@+id/add_image_text"
                     android:textColor="@color/addImageColor"
-                    android:textSize="25sp"
+                    android:textSize="35px"
                     android:text="(Add Profile Image)"
                     android:layout_centerHorizontal="true"
                     android:layout_below="@+id/imageButton"
@@ -71,7 +64,7 @@
                     <EditText
                         android:id="@+id/name"
                         android:hint="Name"
-                        android:textSize="25sp"
+                        android:textSize="35px"
                         android:textColorHint="@color/textgrey"
                         android:textColor="@color/textblack"
                         android:layout_width="match_parent"
@@ -88,7 +81,7 @@
                     <EditText
                         android:id="@+id/username"
                         android:hint="Username"
-                        android:textSize="25sp"
+                        android:textSize="35px"
                         android:textColorHint="@color/textgrey"
                         android:textColor="@color/textblack"
                         android:layout_width="match_parent"
@@ -105,7 +98,7 @@
                     <EditText
                         android:id="@+id/location"
                         android:hint="Location"
-                        android:textSize="25sp"
+                        android:textSize="35px"
                         android:textColorHint="@color/textgrey"
                         android:textColor="@color/textblack"
                         android:layout_width="match_parent"
@@ -122,7 +115,7 @@
                     <EditText
                         android:id="@+id/website"
                         android:hint="Website"
-                        android:textSize="25sp"
+                        android:textSize="35px"
                         android:textColorHint="@color/textgrey"
                         android:textColor="@color/textblack"
                         android:layout_width="match_parent"
@@ -134,7 +127,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
-                    android:textSize="30sp"
+                    android:textSize="40px"
                     android:layout_below="@id/website_input_layout"
                     android:textColor="@color/textblack"
                     android:layout_width="wrap_content"
@@ -146,7 +139,7 @@
                     android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/summary"
-                        android:textSize="25sp"
+                        android:textSize="35px"
                         android:hint="Add summary here"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -161,7 +154,7 @@
                     android:layout_below="@id/summary_input_layout"
                     android:background="@drawable/roundshapebtn"
                     android:focusableInTouchMode="false"
-                    android:textSize="48px"
+                    android:textSize="35px"
                     android:height="88px"
                     android:width="420px"
                     android:layout_width="wrap_content"

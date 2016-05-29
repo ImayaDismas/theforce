@@ -5,7 +5,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -28,7 +27,7 @@ import retrofit.client.Response;
 /**
  * Created by imaya on 5/29/16.
  */
-public class MyStoriesActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener{
+public class DiscoverActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener{
 
 private LinearLayoutManager lLayout;
         String API = "http://52.37.33.186/";
@@ -49,7 +48,7 @@ SwipeRefreshLayout mSwipeRefreshLayout;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_stories_activity);
+        setContentView(R.layout.activity_discover);
         ButterKnife.bind(this);
 
         //setTitle(null);
@@ -61,13 +60,13 @@ protected void onCreate(Bundle savedInstanceState) {
 //        topToolBar.setLogoDescription(getResources().getString(R.string.logo_desc));
 
 
-        lLayout = new LinearLayoutManager(MyStoriesActivity.this);
+        lLayout = new LinearLayoutManager(DiscoverActivity.this);
         List<ItemObject> rowListItem = getAllItemList();
 
         RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
         rView.setLayoutManager(lLayout);
 
-        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(MyStoriesActivity.this, rowListItem);
+        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(DiscoverActivity.this, rowListItem);
         rView.setAdapter(rcAdapter);
 
         Toast.makeText(getApplicationContext(), "Swipe down to refresh", Toast.LENGTH_LONG).show();
@@ -93,13 +92,13 @@ public void failure(RetrofitError error) {
 @Override
 public void success(All all, Response response) {
         mSwipeRefreshLayout.setRefreshing(false);
-        lLayout = new LinearLayoutManager(MyStoriesActivity.this);
+        lLayout = new LinearLayoutManager(DiscoverActivity.this);
         List<ItemObject> rowListItem = getAllItemList();
 
         RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
         rView.setLayoutManager(lLayout);
 
-        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(MyStoriesActivity.this, rowListItem);
+        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(DiscoverActivity.this, rowListItem);
         rView.setAdapter(rcAdapter);
         }
         });
@@ -120,7 +119,7 @@ public void success(All all, Response response) {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_search) {
-            Toast.makeText(MyStoriesActivity.this, "Search", Toast.LENGTH_LONG).show();
+            Toast.makeText(DiscoverActivity.this, "Search", Toast.LENGTH_LONG).show();
         }
         return super.onOptionsItemSelected(item);
     }

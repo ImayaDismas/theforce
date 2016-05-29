@@ -65,7 +65,7 @@ public class MainActivityDrawer extends AppCompatActivity{
                 }
 
                 if (menuItem.getItemId() == R.id.nav_item_discover) {
-                    Intent intent = new Intent(MainActivityDrawer.this, MyStoriesActivity.class);
+                    Intent intent = new Intent(MainActivityDrawer.this, DiscoverActivity.class);
                     startActivity(intent);
 //                    FragmentTransaction afragmentTransaction = mFragmentManager.beginTransaction();
 //                    afragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();

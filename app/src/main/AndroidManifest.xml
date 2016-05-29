@@ -59,6 +59,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".DiscoverActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MyStoriesActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".StoryCollaborators"
             android:label="Story Collaborators">

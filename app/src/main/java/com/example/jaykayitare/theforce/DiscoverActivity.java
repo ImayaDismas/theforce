@@ -57,7 +57,7 @@ public class DiscoverActivity extends AppCompatActivity implements SwipeRefreshL
 
         Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(topToolBar);
-        
+
         ButterKnife.bind(this);
 
         mSwipeRefreshLayout.setOnRefreshListener(this);

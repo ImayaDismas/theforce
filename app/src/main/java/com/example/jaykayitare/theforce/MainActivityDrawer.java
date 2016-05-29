@@ -1,5 +1,6 @@
 package com.example.jaykayitare.theforce;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -64,8 +65,10 @@ public class MainActivityDrawer extends AppCompatActivity{
                 }
 
                 if (menuItem.getItemId() == R.id.nav_item_discover) {
-                    FragmentTransaction afragmentTransaction = mFragmentManager.beginTransaction();
-                    afragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
+                    Intent intent = new Intent(MainActivityDrawer.this, MyStoriesActivity.class);
+                    startActivity(intent);
+//                    FragmentTransaction afragmentTransaction = mFragmentManager.beginTransaction();
+//                    afragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
                 }
 
                 if (menuItem.getItemId() == R.id.nav_item_profile) {
